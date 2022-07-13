@@ -1,0 +1,7 @@
+---
+
+ - name: execute powershell script
+   hosts: all
+   become_user: true
+   roles:
+     - role_execute_bat_file
