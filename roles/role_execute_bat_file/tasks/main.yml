@@ -3,6 +3,6 @@
   script: /temp/test_1.bat
   register: out
   
-- name: output
+- name: "output"
   debug:
     - var: out
