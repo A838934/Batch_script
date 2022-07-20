@@ -1,6 +1,6 @@
 
 - name: execute batch
-  script: C:/temp/test_1.bat
+  script: C:\temp\test_1.bat
   register: out
   
 - name: "output"
