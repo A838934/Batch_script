@@ -1,8 +1,10 @@
+---
 
 - name: execute batch
   script: C:\temp\test_1.bat
-  register: out
+ 
+ register: out
   
-- name: "output"
+- name: output
   debug:
      var: out
