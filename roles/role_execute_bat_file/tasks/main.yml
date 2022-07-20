@@ -1,10 +1,10 @@
 ---
 
 - name: execute batch
-  script: C:/temp/test_1.bat
+  win_command: C:\temp\test_1.bat
  
- register: out
+ register: output
   
-- name: output
-  debug:
-     var: out
+- debug:
+   msg:      
+   - "{{ output }}"
