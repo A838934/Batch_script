@@ -1,7 +1,7 @@
 ---
 
 - name: execute batch
-  win_command: C:/temp/test_1.bat
+  win_command: C:\temp\test_1.bat
  
   register: output
   
