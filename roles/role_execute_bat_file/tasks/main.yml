@@ -8,7 +8,7 @@
 - name: report if a file exists
   debug: 
     msg: "The file exists"
-  when: output.exists
+  when: output.exists == true
   
 - debug:
    msg:      
