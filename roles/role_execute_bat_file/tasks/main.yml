@@ -8,7 +8,7 @@
    - "{{ output }}"  
    
 - name: Checking if file exists
-  win_stat: 
+  stat: 
    path: "C:\temp\test_1.bat"
   register: file_data
   
