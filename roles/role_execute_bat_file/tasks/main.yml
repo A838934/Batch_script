@@ -1,9 +1,12 @@
 ---
-
 - name: execute batch
   win_command: C:\temp\test_1.bat
- 
   register: output
+  
+- name: Checking if a file exists
+  stat: 
+   path: "C:\temp\test_1.bat"
+  register: output 
   
 - debug:
    msg:      
