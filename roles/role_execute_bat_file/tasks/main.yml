@@ -12,4 +12,9 @@
    path: "C:\temp\test_1.bat"
   register: output 
   
+- name: report if a file exists
+  debug: 
+    msg: "The file exists"
+  when: output.stat.exists
+  
 
