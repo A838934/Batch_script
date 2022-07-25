@@ -14,7 +14,8 @@
   
 - name: report if a file exists
   debug: 
-    msg: "The file exists"
+    msg: 
+    - "{{The file exists}}"
   when: file_data.stat.exists
   
 
