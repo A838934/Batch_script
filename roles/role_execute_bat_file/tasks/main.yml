@@ -3,15 +3,20 @@
   win_command: C:\temp\test_1.bat
   register: output
   
- 
+- debug:
+   msg:      
+   - "{{ output }}"  
+   
+- name: Checking if file exists
+  win_stat: 
+   path: "C:\temp\test_1.bat"
+  register: file_data
   
 - name: report if a file exists
   debug: 
     msg: "The file exists"
-  when: output.exists == true
+  when: file_data.stat.exists
   
-- debug:
-   msg:      
-   - "{{ output }}"  
+
   
 
