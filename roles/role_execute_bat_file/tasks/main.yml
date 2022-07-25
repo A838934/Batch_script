@@ -12,10 +12,15 @@
    path: "C:/temp/test_1.bat"
   register: file_data
   
-- name: report if a file exists
+- name: Report if a file exists
   debug: 
-    msg: "The file exists"
+    msg: "The batch file exist"
   when: file_data.stat.exists
+  
+- name: Report if file doesn't exists
+  debug: 
+    msg: "The batch file doesn't exist"
+  when: not file_data.stat.exists
   
 
   
