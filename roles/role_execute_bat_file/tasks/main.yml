@@ -3,12 +3,7 @@
   win_command: C:\temp\test_1.bat
   register: output
   
-
-  
-- name: Checking if a file exists
-  win_stat: 
-   path: "C:\temp\test_1.bat"
-  register: output 
+ 
   
 - name: report if a file exists
   debug: 
