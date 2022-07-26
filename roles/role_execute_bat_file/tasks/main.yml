@@ -1,6 +1,6 @@
 ---
 - name: execute batch
-  win_shell: 
+  win_file: 
    path: "{{ path }}"
   register: output
   
