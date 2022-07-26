@@ -9,7 +9,7 @@
    
 - name: Checking if file exists
   win_stat: 
-   path: "C:/temp/test_1.bat"
+   path: "C:/temp/test_2.bat"
   register: file_data
   
 - name: Report if a file exists
