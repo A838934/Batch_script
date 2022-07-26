@@ -19,7 +19,7 @@
   
 - name: Report if file doesn't exists
   debug: 
-    msg: "The batch file doesn't exist"
+    err_msg: "The batch file doesn't exist"
   when: not file_data.stat.exists
   
 
