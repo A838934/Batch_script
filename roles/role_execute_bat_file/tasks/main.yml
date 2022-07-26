@@ -1,8 +1,8 @@
 ---
 - name: execute batch
   win_shell: 
-   src: "test_1.bat"
-   dest: "C:/temp/test_1.bat"
+   src: test_1.bat
+   dest: C:/temp/test_1.bat
   register: output
   
 - debug:
