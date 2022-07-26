@@ -1,6 +1,7 @@
 ---
 - name: execute batch
-  win_shell: C:\temp\test_1.bat
+  win_shell: 
+   path: "{{ path }}"
   register: output
   
 - debug:
