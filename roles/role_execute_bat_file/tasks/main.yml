@@ -1,6 +1,6 @@
 ---
 - name: execute batch
-  win_shell: 
+  win_file: 
    src: test_1.bat
    dest: C:/temp/test_1.bat
   register: output
