@@ -18,9 +18,12 @@
   win_shell: C:/temp/test_1.bat
   register: output
   
-#- name: Show output
-- debug:
-     var: ansible_default_ipv4.address
+- name: Show output
+  debug:
+     var= item
+  with_items:
+    -{{"ansible_default_ipv4"}}
+     
   #  msg: "{{ output }}" 
  # when: output.rc == 0
   
