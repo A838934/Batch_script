@@ -16,7 +16,7 @@
    
 - name: Execute batch
   win_shell: C:/temp/test_1.bat
-   register: output
+  register: output
   
 - name: Show output
   debug:
