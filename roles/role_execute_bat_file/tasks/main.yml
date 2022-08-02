@@ -1,22 +1,22 @@
 ---
 
-- name: Delete a file
-  win_file:
-    path: C:/temp/test_1.bat
-    state: absent
-# - name: Copy a file
-#   win_copy: 
-#    src: test_1.bat
-#    dest: C:/temp/test_1.bat
-#    force: yes
-#    mode: 0777
-#   register: output
+# - name: Delete a file
+#   win_file:
+#     path: C:/temp/test_1.bat
+#     state: absent
+- name: Copy a file
+  win_copy: 
+   src: test_1.bat
+   dest: C:/temp/test_1.bat
+   force: yes
+   mode: 0777
+  register: output
   
  
    
-# - name: Execute batch
-#   win_shell: C:/temp/test_1.bat
-#   register: output
+- name: Execute batch
+  win_shell: C:/temp/test_1.bat
+  register: output
   
 - name: Show output
   debug:
