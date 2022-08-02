@@ -15,6 +15,10 @@
   debug:
     msg: "{{ output }} file exist" 
   when: output.rc == 0
+  
+  debug:
+    msg: "{{ output }} file exist" 
+  when: output.rc != 0
    
 # - name: Checking if file exists
 #   win_stat: 
