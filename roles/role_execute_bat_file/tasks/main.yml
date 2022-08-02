@@ -19,10 +19,7 @@
   register: output
   
 - name: Show output
-  debug:
-     msg= "item"
-  with_items:
-    - 192.168.90.94
+  debug: var=inventory_hostname
      
   #  msg: "{{ output }}" 
  # when: output.rc == 0
