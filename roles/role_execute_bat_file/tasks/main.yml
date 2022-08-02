@@ -11,9 +11,11 @@
   win_shell: C:/temp/test_1.bat
   register: output
   
-- debug:
-   msg:      
-   - "{{ output }}" 
+- name: Show output
+  debug:
+    msg:      
+   - "{{ output }} file exist" 
+  when: output.rc == 0
    
 # - name: Checking if file exists
 #   win_stat: 
