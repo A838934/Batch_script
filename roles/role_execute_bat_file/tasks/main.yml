@@ -25,7 +25,7 @@
   
 - name: Show output
   debug: 
-    var: result
+    msg: "{{ ansible_facts['ansible_ip_addresses'] }} is the current IP address"
      #var: output.stdout_lines
    # var: "{{ ansible_facts['ansible_default_ipv4']['address'] }}"
 #   debug:
