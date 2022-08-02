@@ -17,7 +17,7 @@
   when: output.rc == 0
   
   debug:
-    msg: "{{ output }} file exist" 
+    msg: "{{ output }} file not exist" 
   when: output.rc != 0
    
 # - name: Checking if file exists
