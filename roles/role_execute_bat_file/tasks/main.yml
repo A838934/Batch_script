@@ -19,7 +19,7 @@
   register: output
   
 - name: Show output
-   debug: 
+  debug: 
      var: "{{ output }}"
 #   debug:
 #     msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
