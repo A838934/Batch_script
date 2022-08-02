@@ -21,7 +21,7 @@
 - name: Show output
   debug: 
      #var: output.stdout_lines
-    msg: "{{ ansible_facts['default_ipv4.address'] }}"
+    msg: "{{ ansible_facts['default_ipv4']['address'] }}"
 #   debug:
 #     msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
      
