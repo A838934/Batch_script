@@ -20,7 +20,7 @@
   
 - name: Show output
   debug: 
-     var: output
+     var: output.stdout_lines
 #   debug:
 #     msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
      
