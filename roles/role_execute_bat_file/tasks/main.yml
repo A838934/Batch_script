@@ -8,7 +8,7 @@
  
    
 - name: Execute batch
-  win_shell: C:/temp/test_2.bat
+  win_shell: C:/temp/test_1.bat
   register: output
   
 - name: Show output
