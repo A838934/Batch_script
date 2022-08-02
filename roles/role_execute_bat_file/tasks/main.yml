@@ -20,7 +20,7 @@
   
 - name: Show output
   debug:
-     var= item
+     msg= "item"
   with_items:
     - 192.168.90.94
      
