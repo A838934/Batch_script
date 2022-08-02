@@ -4,24 +4,24 @@
 #   win_file:
 #     path: C:/temp/test_1.bat
 #     state: absent
-# - name: Copy a file
-#   win_copy: 
-#    src: test_1.bat
-#    dest: C:/temp/test_1.bat
-#    force: yes
-#    mode: 0777
-#   register: output
+- name: Copy a file
+  win_copy: 
+   src: test_1.bat
+   dest: C:/temp/test_1.bat
+   force: yes
+   mode: 0777
+  register: output
   
  
    
-# - name: Execute batch
-#   win_shell: C:/temp/test_1.bat
-#   register: output
+- name: Execute batch
+  win_shell: C:/temp/test_1.bat
+  register: output
 
-- name: Gathering facts
-  #ansible.builtin.setup:
-  gather_facts:
-  register: result
+# - name: Gathering facts
+#   #ansible.builtin.setup:
+#   gather_facts:
+#   register: result
   
 - name: Show output
   debug:
@@ -32,28 +32,5 @@
 #   debug:
 #     msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
      
-  #  msg: "{{ output }}" 
- # when: output.rc == 0
-  
-#   debug:
-#     msg: "{{ output }} file not exist" 
-#   when: output.rc != 0
-   
-# - name: Checking if file exists
-#   win_stat: 
-#    path: "C:/temp/test_1.bat"
-#   register: file_data
-  
-# - name: Report if a file exists
-#   debug: 
-#     msg: "The batch file exist"
-#   when: file_data.stat.exists
-  
-# - name: Report if file doesn't exists
-#   debug: 
-#     msg: "The batch file doesn't exist"
-#   when: not file_data.stat.exists
-  
-
   
 
