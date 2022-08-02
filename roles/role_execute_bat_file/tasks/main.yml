@@ -19,7 +19,7 @@
 #   register: output
 
 - name: Gathering facts
-  gather_facts:
+  ansible.builtin.setup:
   register: result
   
 - name: Show output
