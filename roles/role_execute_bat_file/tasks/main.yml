@@ -19,7 +19,9 @@
   register: output
   
 - name: Show output
-  debug: var=inventory_hostname
+  #debug: var=inventory_hostname
+  debug:
+    msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
      
   #  msg: "{{ output }}" 
  # when: output.rc == 0
