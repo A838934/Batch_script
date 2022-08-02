@@ -3,6 +3,8 @@
   win_copy: 
    src: test_1.bat
    dest: C:/temp/test_1.bat
+   forec: yes
+   mode: 0777
   register: output
   
  
@@ -13,7 +15,7 @@
   
 - name: Show output
   debug:
-    msg: "{{ output }} file exist" 
+    msg: "{{ output }}" 
  # when: output.rc == 0
   
 #   debug:
