@@ -15,7 +15,7 @@
   
 - name: Show output
   debug:
-     var: output.address
+     var: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
   #  msg: "{{ output }}" 
  # when: output.rc == 0
   
