@@ -1,28 +1,34 @@
 ---
-- name: execute batch
+- name: Copy a file
   win_copy: 
    src: test_1.bat
    dest: C:/temp/test_1.bat
   register: output
   
+ 
+   
+- name: Execute batch
+  win_shell: C:/temp/test_1.bat
+  register: output
+  
 - debug:
    msg:      
-   - "{{ output }}"  
+   - "{{ output }}" 
    
-- name: Checking if file exists
-  win_stat: 
-   path: "C:/temp/test_1.bat"
-  register: file_data
+# - name: Checking if file exists
+#   win_stat: 
+#    path: "C:/temp/test_1.bat"
+#   register: file_data
   
-- name: Report if a file exists
-  debug: 
-    msg: "The batch file exist"
-  when: file_data.stat.exists
+# - name: Report if a file exists
+#   debug: 
+#     msg: "The batch file exist"
+#   when: file_data.stat.exists
   
-- name: Report if file doesn't exists
-  debug: 
-    msg: "The batch file doesn't exist"
-  when: not file_data.stat.exists
+# - name: Report if file doesn't exists
+#   debug: 
+#     msg: "The batch file doesn't exist"
+#   when: not file_data.stat.exists
   
 
   
