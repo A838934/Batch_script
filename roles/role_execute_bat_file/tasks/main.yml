@@ -7,14 +7,18 @@
 
 - name: Copy a file
   win_copy: 
-   src: test_1.bat
-   dest: C:/temp/test_1.bat
+#    src: test_1.bat
+#    dest: C:/temp/test_1.bat
+   src: test_1.ps1
+   dest: C:/temp/test_1.ps1
    force: yes
    mode: 0777
   register: output
   
 - name: Execute batch
-  win_shell: C:/temp/test_1.bat
+  #win_shell: C:/temp/test_1.bat
+  win_shell: C:/temp/test_1.ps1
+
   register: output
   
 - name: Show output
