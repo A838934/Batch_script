@@ -32,6 +32,8 @@
     name: ayu
     password: B0bP4ssw0rd
     state: present
+    groups:
+      - Users
     
      
      
