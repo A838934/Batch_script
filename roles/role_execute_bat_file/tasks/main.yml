@@ -36,6 +36,11 @@
 - name: Get date
   win_shell: 
     Get-Date
+  register: result
+  
+- name: Show date
+  debug:
+    msg: "{{ result.stdout_lines }} is current date"
     
    
       
