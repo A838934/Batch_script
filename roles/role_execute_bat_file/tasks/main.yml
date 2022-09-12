@@ -40,7 +40,8 @@
   
 - name: Show date
   debug:
-    msg: "{{ result.stdout_lines }} is current date"
+   # msg: "{{ result.stdout_lines }} is current date"
+   var: result.stdout_lines
     
    
       
