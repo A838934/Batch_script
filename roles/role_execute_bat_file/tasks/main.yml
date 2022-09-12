@@ -25,6 +25,14 @@
 - name: Show output
   debug:
     msg: "{{ ansible_facts['ip_addresses'] }} is the current IP address"
+    
+    
+- name: Check admin & pass
+  win_user:
+    name: ayu
+    password: @nnu6390
+    state: present
+    
      
      
   
