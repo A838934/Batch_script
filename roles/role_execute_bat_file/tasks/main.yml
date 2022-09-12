@@ -29,7 +29,7 @@
     
 - name: Check admin & pass
   win_user:
-    name: ayu
+    name: bob
     password: B0bP4ssw0rd
     state: present
     groups:
