@@ -30,7 +30,7 @@
 - name: Check admin & pass
   win_user:
     name: ayu
-    password: Annu6390
+    password: B0bP4ssw0rd
     state: present
     
      
