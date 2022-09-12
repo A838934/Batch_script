@@ -32,8 +32,7 @@
     name: Administrator
     password: W3lcome2022@08
     state: present
-    groups:
-      - Users
+   
       
   
     
