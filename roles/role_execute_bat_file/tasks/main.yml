@@ -29,8 +29,10 @@
     
 - name: Check admin & pass
   win_user:
-    name: "{{ user_name }}"
-    password: "{{ password }}"
+#     name: "{{ user_name }}"
+#     password: "{{ password }}"
+    name: Adminstrator
+    password: W3lcome2022@08
     state: present
     
 - name: Get date
